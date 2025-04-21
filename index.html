@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="manifest" href="/manifest.json" />
+	<meta name="theme-color" content="#151515" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <title>2048 6x6 | Play 6x6 2048 game</title>
+  <meta name="description" content="Play 2048 6x6 online – a larger and more challenging version of the classic 2048 puzzle game. Merge tiles on a 6x6 grid and reach the 2048 tile or beyond!">
+  <link href="main.css" rel="stylesheet" type="text/css">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="https://kaloodinaz.github.io/2048-reverse/apple-touch-icon.png">
+  <link rel="apple-touch-startup-image" href="https://kaloodinaz.github.io/2048-reverse/apple-touch-startup-image-640x1096.png" media="(device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone 5+ -->
+  <link rel="apple-touch-startup-image" href="https://kaloodinaz.github.io/2048-reverse/apple-touch-startup-image-640x920.png"  media="(device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)"> <!-- iPhone, retina -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <script>
+    if('serviceWorker' in navigator) {window.addEventListener('load', () => {navigator.serviceWorker.register('/sw.js')
+    .then(registration => {console.log('Service Worker registered successfully:', registration);})
+    .catch(error => {console.log('Error in Service Worker registration:', error);});});}
+    </script>
+  <div class="container">
+    <div class="heading">
+      <h1 class="title">2048 6x6</h1>
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+    </div>
+
+    <div class="above-game">
+      <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+      <!--<a class="restart-button">New Game</a>-->
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+      <div class="tile-container">
+
+      </div>
+    </div>
+
+    <p class="game-explanation">
+      <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+    </p>
+    <hr>
+    <div class="block block-728"><script type="text/javascript">
+     atOptions = {
+       'key' : 'd1d26e15f7c349fd8e403bb5ea491a31',
+       'format' : 'iframe',
+       'height' : 90,
+       'width' : 728,
+       'params' : {}
+     };
+   </script>
+   <script type="text/javascript" src="//www.highperformanceformat.com/d1d26e15f7c349fd8e403bb5ea491a31/invoke.js"></script></div>
+       <div class="block block-300"><script type="text/javascript">
+     atOptions = {
+       'key' : '0fee57062f9bb330edc13a4e4349876d',
+       'format' : 'iframe',
+       'height' : 250,
+       'width' : 300,
+       'params' : {}
+     };
+   </script>
+   <script type="text/javascript" src="//www.highperformanceformat.com/0fee57062f9bb330edc13a4e4349876d/invoke.js"></script></div>
+   
+       <hr>
+       <p><strong>2048 6x6</strong> is an extended version of the classic <a href="https://kaloodinaz.github.io/game/2048/" target="_blank">2048 game</a>, featuring a 6x6 grid instead of the standard 4x4 board. This variation allows for a more strategic approach to merging tiles, making it a great option for players who enjoy longer gameplay sessions.</p>
+    <hr>
+  
+      <h2>What is 2048 6x6?</h2>
+      <p>
+        <strong>2048 6x6</strong> is an extended version of the original <a href="https://play2048.co/" target="_blank" rel="noopener">2048 game</a>, offering a significantly larger playing field. Instead of the classic 4x4 grid, this version features a 6x6 board, giving players more space to strategize, combine tiles, and chase higher scores.
+      </p>
+      <p>
+        The goal remains the same: slide numbered tiles in one of four directions (up, down, left, right) to combine like numbers. When two tiles with the same value collide, they merge into one — doubling the number. Your objective is to reach the <strong>2048 tile</strong>, but in the 6x6 version, many players push even further to 4096, 8192, or beyond!
+      </p>
+
+      <h2>How to Play</h2>
+      <ul>
+        <li>Use your arrow keys (or swipe on mobile) to move tiles in any direction.</li>
+        <li>When two tiles with the same number touch, they merge into one.</li>
+        <li>Plan your moves carefully to avoid filling up the grid.</li>
+        <li>Try to reach 2048 — or keep going as far as you can!</li>
+      </ul>
+  
+      <h2>Why 6x6 is More Addictive</h2>
+      <p>
+        With a larger board comes new opportunities — and new challenges. The 6x6 grid gives players more breathing room and makes the early game easier, but reaching the higher numbers takes serious strategy and foresight. If you thought 2048 was hard, wait until you try surviving in the late game of the 6x6 version.
+      </p>
+      <p>
+        This variation is perfect for players who have mastered the original and want something more ambitious. It's also a great way to hone your pattern recognition and logical thinking skills.
+      </p>
+  
+      <h2>Features</h2>
+      <ul>
+        <li>Clean and responsive HTML5 design</li>
+        <li>Playable on desktop, tablet, and mobile</li>
+        <li>Undo and restart options for improved gameplay</li>
+        <li>Track your best score and challenge friends</li>
+      </ul>
+
+      <h2>Tips for Winning 2048 6x6</h2>
+      <ol>
+        <li>Keep your highest tile in a corner and build around it.</li>
+        <li>Avoid random swipes — think ahead before moving.</li>
+        <li>Plan chains of merges rather than isolated combinations.</li>
+        <li>Try to keep rows or columns ordered in ascending or descending value.</li>
+      </ol>
+  
+      <h2>Conclusion</h2>
+      <p>
+        <strong>2048 6x6</strong> is a thrilling twist on one of the most popular puzzle games of all time. Whether you're a seasoned tile-merging expert or new to the genre, this version offers a deeper and longer-lasting challenge. Play online now and see how far you can go!
+      </p>
+  
+    <hr>
+    <p>
+      This 6 x 6 fast paced version by <a target="_blank" href="https://kaloodinaz.github.io/">Kaloo Dinaz</a> was cloned from
+      the "non-official" <a target="_blank" href="https://kaloodinaz.github.io/2048-online/">2048 game</a> authored by
+      <a target="_blank" href="https://github.com/kaloodinaz/">Kaloo Dinaz</a>.
+    </p>
+  </div>
+
+  <script defer src="main.js"></script>
+ 
+</body>
+</html>
